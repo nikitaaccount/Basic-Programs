@@ -27,9 +27,9 @@ int main()
 	}
 
     if(n==sum)
-	   printf("\n %d is Palindrome number ",n);
+	   printf("\n %d is Amstrong number ",n);
 	else
-	   printf("\n %d is not a Palindrome number ",n);
+	   printf("\n %d is not a Amstrong number ",n);
 	return 0;
 }
 
