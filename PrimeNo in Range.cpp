@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void prime(int);
+int isPrime(int);
 
 int main()
 {
@@ -10,24 +10,24 @@ int main()
 	
 	printf("\n The numbers which are prime are ");
 	for(i=n1;i<=n2;i++)
-	    prime(i);
-	
+	{
+		if(isPrime(i))
+		  printf(" %d ",i);
+	}
     return 0;
 }
 
-void prime(int n)
+int isPrime(int n)
 {
-	int flag,i;
-	for(i=2;i*i<=n;i++)
+	if(n==1)
+	   return 0;
+	if(n==2  || n==3)
+	   return 1;
+	for(int i=2;i*i<=n;i++)
 	{
-		flag=0;
 		if(n%i==0)
-		{
-			flag=1;
-			break;
-		}
+		 return 0;
 	}
-	if(flag==0)
-	    printf(" %d ",n);
+	return 1;
 }
 
